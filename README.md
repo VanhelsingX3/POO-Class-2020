@@ -11,3 +11,6 @@ Tasks of the Object Oriented Programming class | Instructor: [Uayeb25](https://g
 
 ### 04/02/2020
 - **Documentos:** Cardinalidades.
+
+### 07/02/2020
+- **Clase-2:** Resumen.
