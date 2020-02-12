@@ -15,5 +15,8 @@ Tasks of the Object Oriented Programming class | Instructor: [Uayeb25](https://g
 ### 07/02/2020
 - **Clase-2:** Resumen.
 
-### 011/02/2020
+### 10/02/2020
 - **Clase-3:** ¿Qué es QA?, ¿Qué es JSON?, configuración de JSON con node.js usando `npm init`, Instalación de Typescript en package.json.
+
+### 11/02/2020
+- **Clase-4:** comenzar proyecto, Correr nuestro proyecto, Correr nuestro codigo transpilado.
