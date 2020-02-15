@@ -20,3 +20,6 @@ Tasks of the Object Oriented Programming class | Instructor: [Uayeb25](https://g
 
 ### 11/02/2020
 - **Clase-4:** comenzar proyecto, Correr nuestro proyecto, Correr nuestro codigo transpilado.
+
+### 15/02/2020
+- **Clase-5&6:** Diccionario en typescript, instancias.
