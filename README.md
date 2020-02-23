@@ -23,3 +23,12 @@ Tasks of the Object Oriented Programming class | Instructor: [Uayeb25](https://g
 
 ### 15/02/2020
 - **Clase-5&6:** Diccionario en typescript, instancias.
+
+### 19/02/2020
+- **Clase-7:** Tarea2.
+
+### 20/02/2020
+- **Clase-8:** Mongo Atlas.
+
+### 21/02/2020
+- **Clase-9:** Organizacion de dependencias.
