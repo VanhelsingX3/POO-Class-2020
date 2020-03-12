@@ -78,6 +78,6 @@ Y con esto terminamos la parte de dependencias de desarrollo.
 Ahora instalaremos las dependencias que si queremos que vayan a etapa de producción.
 
 > `npm install mongoose`
-> `npm install --save @types/mongoose`
+> `npm install @types/mongoose`
 
 Enviaremos aquellas que interactuan con la base de datos.
