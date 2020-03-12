@@ -9,9 +9,10 @@ Los  `dependencies`  son las que utilizas para que tu proyecto trabaja e.j expre
 
 Antes que nada debemos crear nuestro proyecto usando Node.js & Typescript con los comandos npm:
 
+>     npm init --yes
+
 >     npm install ó npm i
 
->     npm init --yes
  
 Seguidamente de crear nuestro *package json* escribimos los siguientes *script:*
 
