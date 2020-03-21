@@ -25,7 +25,9 @@
 ⁕ `git checkout -- «file»`: Regresar a la última versión 'commiteada'.
 
 ⁕ `git checkout 'rama'`: Cambiar de rama.
-—————
+
+———————————————————————————————————————————————————————
+
 Necesario para git commit
 
 ⁕ `git config --global user.email` "vanhelx3@gmail.com"
