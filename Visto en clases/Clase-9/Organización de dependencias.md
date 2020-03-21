@@ -9,9 +9,10 @@ Los  `dependencies`  son las que utilizas para que tu proyecto trabaja e.j expre
 
 Antes que nada debemos crear nuestro proyecto usando Node.js & Typescript con los comandos npm:
 
+>     npm init --yes
+
 >     npm install ó npm i
 
->     npm init --yes
  
 Seguidamente de crear nuestro *package json* escribimos los siguientes *script:*
 
@@ -77,6 +78,6 @@ Y con esto terminamos la parte de dependencias de desarrollo.
 Ahora instalaremos las dependencias que si queremos que vayan a etapa de producción.
 
 > `npm install mongoose`
-> `npm install --save @types/mongoose`
+> `npm install @types/mongoose`
 
 Enviaremos aquellas que interactuan con la base de datos.
