@@ -8,7 +8,7 @@
 
 4. Usa el comando `git init` para indicar que usaras git en este proyecto.
 
-5. Ahora realiza el `git commit -m`
+5. Ahora realiza el `git commit -m`"Hola mundo"
 
 6. Ve al navegador nuevamente y usa el comando `git remote add origin` copia y pega la petición HTTP que te da github.
 
