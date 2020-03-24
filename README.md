@@ -32,3 +32,9 @@ Tasks of the Object Oriented Programming class | Instructor: [Uayeb25](https://g
 
 ### 21/02/2020
 - **Clase-9:** Organizacion de dependencias.
+
+### 22/03/2020
+- **HELP:** Carpeta para ayudar a compañeros.
+
+### 23/03/2020
+- **Objectos-referenciados:** Tarea del campus.
