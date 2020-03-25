@@ -43,11 +43,11 @@ export const DeleteCarrera = async function(_name: string){
 
     Curso.deleteOne = ({name:_name} (err:any, result:any) =>{
         if(err){
-            console.log(err.message)
+            console.log(err.message);
         }else{
-            console.log(result)
+            console.log(result);
         }
-    })
+    });
 }
 
 export function getCurso(_name: string):Promise<any>{
