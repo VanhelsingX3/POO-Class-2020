@@ -38,3 +38,6 @@ Tasks of the Object Oriented Programming class | Instructor: [Uayeb25](https://g
 
 ### 23/03/2020
 - **Objectos-referenciados:** Tarea del campus.
+
+### 28/03/2020
+- **Clases-en-cuarentena:** Crear proyecto restful API.
