@@ -1,20 +1,22 @@
 import mongoose = require("mongoose");
 import {connectMongoDB} from "./utils"
 
-export interface ICarrera extends mongoose.Document { 
+export interface ICarrera extends mongoose.Document {
     name:[string];
 }
 
 const CarreraSchema = new mongoose.Schema({
-    name: {type:Array, required: true},
+    _id: {type:Number,required: true},
+    name: {type:Array, required: true}
 });
 
 export const Carrera = mongoose.model<ICarrera>("Carrera", CarreraSchema);
 
-export const CreateCarrera = async function(name:[string]){
+export const CreateCarrera = async function(id:number, name:[string]){
     await connectMongoDB;
 
     const newOne = new Carrera();
+    newOne._id = id;
     newOne.name = name;
 
     newOne.save( (err:any) =>{
@@ -26,21 +28,22 @@ export const CreateCarrera = async function(name:[string]){
     } );
 }
 
-export const DeleteCarrera = async function(_name:[string]){
+export const DeleteCarrera = async function(filter: any){
     await connectMongoDB;
 
-    Carrera.deleteOne = ({name:_name} (err:any, result:any) =>{
+    Carrera.deleteMany(filter, (err:any,result:any) =>{
         if(err){
             console.log(err.message);
         }else{
             console.log(result);
         }
-    })
+    });
+
 }
 
-export function getCarrera(_name: [string]):Promise<any>{
+export function getCarrera(filter: any):Promise<any>{
     return new Promise<any>( resolve => {
-        Carrera.findOne({ name: _name}, (err:any,data:any) => {
+        Carrera.findOne(filter, (err:any,data:any) => {
             if(err){
                 resolve({});
             }else{
@@ -49,3 +52,4 @@ export function getCarrera(_name: [string]):Promise<any>{
         } );
     });
 }
+

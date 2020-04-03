@@ -1,12 +1,14 @@
 //librerias
-import {CreateCarrera,DeleteCarrera} from "./carrera"
-import {CreateCurso,} from "./curso"
+import {CreateCarrera, DeleteCarrera} from "./carrera"
+import {CreateCurso,DeleteCurso} from "./curso"
 //---
 
 const nameCarrera:any = [];
 nameCarrera.push("IS");
 
-//CreateCarrera(nameCarrera);
-//CreateCurso(["IS"],"Algebra",1500);
+CreateCarrera(1,nameCarrera); // Realizar este;
+//CreateCurso(1,{_id:1},"Algebra",1500); // Descomentar este y ejecutar después xd
 
-DeleteCarrera(["IS"]);
+// DeleteCurso({_id:1});
+// DeleteCarrera({_id:1});
+

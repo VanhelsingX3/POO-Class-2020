@@ -9,21 +9,23 @@ export interface ICurso extends mongoose.Document {
 }
 
 const CursoSchema = new mongoose.Schema({
+    _id: {type: Number, required: true},
     name: {type: String, required: true},
     seccion:{type:Number, required: true},
-    career_id:{type:mongoose.Schema.Types.ObjectId, ref: "Carrera"}
+    career_id:{ type: mongoose.Schema.Types.ObjectId, ref: "Carrera"}
 });
 
 export const Curso = mongoose.model<ICurso>("Curso", CursoSchema);
 
-export const CreateCurso = async function(nameCarrera:[string],name:string,seccion:number){
+export const CreateCurso = async function(id:number,careerID:any,name:string,seccion:number){
     //Conectar con la base de datos
     await connectMongoDB;
     //Obtener el Carrera en funcion del nombre
-    const career:any = await getCarrera(nameCarrera);
+    const career:any = await getCarrera(careerID);
 
     //persistencia de nuestro Curso
     const c = new Curso();
+    c._id = id;
     c.name = name;
     c.seccion = seccion;
     c.career_id = career;
@@ -38,26 +40,38 @@ export const CreateCurso = async function(nameCarrera:[string],name:string,secci
 }
 
 
-export const DeleteCarrera = async function(_name: string){
+export const DeleteCurso = async function(filter: any){
     await connectMongoDB;
 
-    Curso.deleteOne = ({name:_name} (err:any, result:any) =>{
+    Curso.deleteMany(filter, (err:any,result:any) =>{
         if(err){
             console.log(err.message);
         }else{
             console.log(result);
         }
     });
+
 }
 
-export function getCurso(_name: string):Promise<any>{
+export function getCurso(filter: any):Promise<any>{
     return new Promise<any>( resolve => {
-        Curso.findOne({ name: _name}, (err:any,data:any) => {
+        Curso.findOne(filter, (err:any,data:any) => {
             if(err){
                 resolve({});
             }else{
                 resolve(data);
             }
         } );
+    });
+}
+
+export const UpdateCurso = async function(filter:any,update:any){
+    await connectMongoDB;
+    Curso.updateMany(filter,update,(err:any,result:any)=>{
+        if(err){
+            console.log(err.message);
+        }else{
+            console.log(result);
+        }
     });
 }
